@@ -1,0 +1,119 @@
+<!-- Sidebar -->
+{% load static %}
+<div class="sidebar">
+  <ul style="position: sticky; z-index: 2; top: 0;" class="navbar-nav bg-c-lite-green sidebar sidebar-dark accordion " id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <div class="sidebar-brand d-flex align-items-center justify-content-center">
+          <div class="sidebar-brand-icon rotate-n-15">
+              <i class="fas fa-user-graduate"></i>
+          </div>
+          <div class="sidebar-brand-text mx-3">Recommender System</div>
+      </div>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+     <li class="nav-item active">
+         <a class="nav-link" id="DashboardAdmin" href="{% url 'DashboardAdmin' %}">
+           {% if user.profile_picture %}
+             <img class="img-fluid img-profile rounded-circle" src="{{request.user.profile_picture.url}}">
+           {% else %}
+             <img class="img-fluid img-profile rounded-circle" src="{% static 'img/default_profile_2.png'  %}">
+           {% endif %}
+             <span>Dashboard</span></a>
+     </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+          Interface
+      </div>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+          <a class="nav-link" id="{% url 'advertise' %}" href="{% url 'advertise' %}"><i id="advertise_icon" class="fas fa-ad"></i>
+            <span>Advertise</span>
+          </a>
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+          <a class="nav-link" id="{% url 'browser' %}" href="{% url 'browser' %}"><i id="browser_icon" class="fas fa-search"></i>
+            <span>Browse</span>
+          </a>
+      </li>
+      <!-- Nav Item - Pages Collapse Menu -->
+      <!-- <li class="nav-item">
+          <a class="nav-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Graduates</span>
+          </a>
+          <div id="collapseOne" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+              <div class="bg-white py-2 collapse-inner rounded">
+                  <a class="collapse-item" id="{% url 'pendingaccounts' %}" href="{% url 'pendingaccounts' %}">Pending</a>
+                  <a class="collapse-item" id="{% url 'approvedaccounts' %}" href="{% url 'approvedaccounts' %}">Approved</a>
+              </div>
+          </div>
+      </li> -->
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Graduates</span>
+          </a>
+          <div id="collapsethree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+              <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" id="{% url 'pendingaccounts' %}" href="{% url 'pendingaccounts' %}">Pending</a>
+                <a class="collapse-item" id="{% url 'approvedaccounts' %}" href="{% url 'approvedaccounts' %}">Approved</a>
+              </div>
+          </div>
+      </li>
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+              <i class="fas fa-bullhorn"></i>
+              <span>Announcements</span>
+          </a>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+              <div class="bg-white py-2 collapse-inner rounded">
+                  <a class="collapse-item" id="{% url 'add_announcements' %}" href="{% url 'add_announcements' %}">Post</a>
+                  <a class="collapse-item" id="{% url 'display_announcements' %}" href="{% url 'display_announcements' %}">Display</a>
+              </div>
+          </div>
+      </li>
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+          Addons
+      </div>
+      <!-- Nav Item - Pages Collapse Menu -->
+      <!-- <li class="nav-item">
+          <a class="nav-link" href="{% url 'job_requests' %}">
+              <i class="fas fa-bullhorn"></i>
+              <span>Job Requests</span></a>
+      </li> -->
+
+
+      <li class="nav-item">
+          <a class="nav-link" id="{% url 'users' %}" href="{% url 'users' %}">
+              <i id="users_icon" class="fas fa-users"></i>
+              <span>User Graduates</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+  </ul>
+  <!-- End of Sidebar -->
+</div>
