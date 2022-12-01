@@ -119,6 +119,37 @@
   	  });
   </script>
 
+<script>
+  function side_bar_active(){
+    current_url = window.location.href;
+    admindash = document.getElementById("admindash");
+    create_user_management = document.getElementById("create_user_management");
+    display_user_management = document.getElementById("display_user_management");
+    school_report = document.getElementById("school_report");
+    user_graduates = document.getElementById("user_graduates");
+
+      if (current_url == admindash){
+        admindash.style.background = "black";
+        admindash.style.color = "white";
+      }else if (current_url == create_user_management){
+        create_user_management.style.background = "black";
+        create_user_management.style.color = "white";
+      }else if (current_url == display_user_management){
+        display_user_management.style.background = "black";
+        display_user_management.style.color = "white";
+      }else if (current_url == school_report){
+          school_report.style.background = "black";
+          school_report.style.color = "white";
+          school_report_icon.style.color = "white";
+      }else if (current_url == user_graduates){
+          user_graduates.style.background = "black";
+          user_graduates.style.color = "white";
+          user_graduates_icon.style.color = "white";
+      }
+
+  }
+</script>
+
 </body>
 
 </html>

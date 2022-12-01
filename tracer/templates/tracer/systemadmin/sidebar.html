@@ -16,7 +16,7 @@
       <hr class="sidebar-divider my-0 sticky">
 
       <li class="nav-item active sticky">
-          <a class="nav-link" href="{% url 'admindash' %}">
+          <a class="nav-link" id="admindash" href="{% url 'admindash' %}">
             {% if request.user.profile_picture %}
               <img class="img-fluid img-profile rounded-circle" src="{{request.user.profile_picture.url}}">
             {% else %}
@@ -42,15 +42,15 @@
           </a>
           <div id="collapseone" class="collapse" aria-labelledby="headingone" data-parent="#accordionSidebar">
               <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="{% url 'create_user_management' %}">Create Admin</a>
-                <a class="collapse-item" href="{% url 'display_user_management' %}">Display Admin</a>
+                <a class="collapse-item" id="create_user_management" href="{% url 'create_user_management' %}">Create Account</a>
+                <a class="collapse-item" id="display_user_management" href="{% url 'display_user_management' %}">Display Accounts</a>
               </div>
           </div>
       </li>
       {% endif %}
 
       <!-- Nav Item - Pages Collapse Menu -->
-      <li class="nav-item">
+      <!-- <li class="nav-item">
           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
               <i class="fas fa-poll"></i>
               <span>Reports</span>
@@ -58,11 +58,17 @@
           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
               <div class="bg-white py-2 collapse-inner rounded">
                   <a class="collapse-item" href="{% url 'school_report' %}">School Reports</a>
-                  <!-- <a class="collapse-item" href="{% url 'school_record' %}">School Records</a> -->
 
               </div>
           </div>
-      </li>
+      </li> -->
+
+      <li class="nav-item sticky">
+        <a class="nav-link" id="school_report" href="{% url 'school_report' %}">
+            <i id="school_report_icon" class="fas fa-poll"></i>
+            <span>School Reports</span>
+        </a>
+       </li>
 
 
       <!-- Divider -->
@@ -74,8 +80,8 @@
       </div>
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item sticky">
-          <a class="nav-link" href="{% url 'user_graduates' %}">
-              <i class="fas fa-user"></i>
+          <a class="nav-link" id="user_graduates" href="{% url 'user_graduates' %}">
+              <i id="user_graduates_icon" class="fas fa-user"></i>
               <span>User Graduates</span></a>
       </li>
 
