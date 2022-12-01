@@ -36,6 +36,7 @@ from django.core.mail import EmailMessage
 # @login_required(login_url='login')
 # @allowed_users(allowed_roles=['is_system_admin'])
 def admindash(request):
+    
     count_users = User.objects.filter(graduate=True).count()
     count_employed = User.objects.filter(employed=True).count()
     count_unemployed = User.objects.filter(unemployed=True).count()
