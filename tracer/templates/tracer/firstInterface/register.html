@@ -63,7 +63,7 @@
 											<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
                         <label for="inputSchool" class="form-label" Required="school">School</label>
 
-												{% render_field form.school class="form-control" onchange="School()" id="id_school" %}
+								{% render_field form.school class="form-control" onchange="School()" id="id_school" %}
 
 					              {% render_field form.argaoCampus style="display:none;" %}
 					              {% render_field form.bariliCampus style="display:none;" %}
@@ -84,7 +84,7 @@
 
                       </div>
                       <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                        <label for="inputYear" class="form-label" Required name="date_graduated">Date Graduated</label>
+                        <label for="inputYear" class="form-label" Required name="date_graduated">Year Graduated</label>
 												{{ form.date_graduated }}
                       </div>
                       <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -180,298 +180,20 @@
 						}
 				}
 		}
-		// function School() {
-		//   var school = document.getElementById("id_school").value;
-		//
-		// 	if (school == "Argao Campus"){
-		// 		document.getElementById("id_argaoCampus").checked = true;
-		// 		document.getElementById("id_bariliCampus").checked = false;
-		// 		document.getElementById("id_carmenCampus").checked = false;
-		// 		document.getElementById("id_CCMECampus").checked = false;
-		// 		document.getElementById("id_daanbantayanCampus").checked = false;
-		// 		document.getElementById("id_danaoCampus").checked = false;
-		// 		document.getElementById("id_dumanjugExt").checked = false;
-		// 		document.getElementById("id_ginatilanExt").checked = false;
-		// 		document.getElementById("id_mainCampus").checked = false;
-		// 		document.getElementById("id_moalboalCampus").checked = false;
-		// 		document.getElementById("id_nagaExt").checked = false;
-		// 		document.getElementById("id_oslobExt").checked = false;
-		// 		document.getElementById("id_pinamungajanExt").checked = false;
-		// 		document.getElementById("id_sanfernandoExt").checked = false;
-		// 		document.getElementById("id_sanfranciscoCampus").checked = false;
-		// 		document.getElementById("id_tuburanCampus").checked = false;
-		//
-		// 	}else if (school == "Barili Campus"){
-		// 		document.getElementById("id_argaoCampus").checked = false;
-		// 		document.getElementById("id_bariliCampus").checked = true;
-		// 		document.getElementById("id_carmenCampus").checked = false;
-		// 		document.getElementById("id_CCMECampus").checked = false;
-		// 		document.getElementById("id_daanbantayanCampus").checked = false;
-		// 		document.getElementById("id_danaoCampus").checked = false;
-		// 		document.getElementById("id_dumanjugExt").checked = false;
-		// 		document.getElementById("id_ginatilanExt").checked = false;
-		// 		document.getElementById("id_mainCampus").checked = false;
-		// 		document.getElementById("id_moalboalCampus").checked = false;
-		// 		document.getElementById("id_nagaExt").checked = false;
-		// 		document.getElementById("id_oslobExt").checked = false;
-		// 		document.getElementById("id_pinamungajanExt").checked = false;
-		// 		document.getElementById("id_sanfernandoExt").checked = false;
-		// 		document.getElementById("id_sanfranciscoCampus").checked = false;
-		// 		document.getElementById("id_tuburanCampus").checked = false;
-		//
-		// 	}else if (school == "Carmen Campus"){
-		// 		document.getElementById("id_argaoCampus").checked = false;
-		// 		document.getElementById("id_bariliCampus").checked = false;
-		// 		document.getElementById("id_carmenCampus").checked = true;
-		// 		document.getElementById("id_CCMECampus").checked = false;
-		// 		document.getElementById("id_daanbantayanCampus").checked = false;
-		// 		document.getElementById("id_danaoCampus").checked = false;
-		// 		document.getElementById("id_dumanjugExt").checked = false;
-		// 		document.getElementById("id_ginatilanExt").checked = false;
-		// 		document.getElementById("id_mainCampus").checked = false;
-		// 		document.getElementById("id_moalboalCampus").checked = false;
-		// 		document.getElementById("id_nagaExt").checked = false;
-		// 		document.getElementById("id_oslobExt").checked = false;
-		// 		document.getElementById("id_pinamungajanExt").checked = false;
-		// 		document.getElementById("id_sanfernandoExt").checked = false;
-		// 		document.getElementById("id_sanfranciscoCampus").checked = false;
-		// 		document.getElementById("id_tuburanCampus").checked = false;
-		//
-		// 	}else if (school == "Cebu City Mountain Extension Campus"){
-		// 		document.getElementById("id_argaoCampus").checked = false;
-		// 		document.getElementById("id_bariliCampus").checked = false;
-		// 		document.getElementById("id_carmenCampus").checked = false;
-		// 		document.getElementById("id_CCMECampus").checked = true;
-		// 		document.getElementById("id_daanbantayanCampus").checked = false;
-		// 		document.getElementById("id_danaoCampus").checked = false;
-		// 		document.getElementById("id_dumanjugExt").checked = false;
-		// 		document.getElementById("id_ginatilanExt").checked = false;
-		// 		document.getElementById("id_mainCampus").checked = false;
-		// 		document.getElementById("id_moalboalCampus").checked = false;
-		// 		document.getElementById("id_nagaExt").checked = false;
-		// 		document.getElementById("id_oslobExt").checked = false;
-		// 		document.getElementById("id_pinamungajanExt").checked = false;
-		// 		document.getElementById("id_sanfernandoExt").checked = false;
-		// 		document.getElementById("id_sanfranciscoCampus").checked = false;
-		// 		document.getElementById("id_tuburanCampus").checked = false;
-		//
-		// 	}else if (school == "Daanbantayan Campus"){
-		// 		document.getElementById("id_argaoCampus").checked = false;
-		// 		document.getElementById("id_bariliCampus").checked = false;
-		// 		document.getElementById("id_carmenCampus").checked = false;
-		// 		document.getElementById("id_CCMECampus").checked = false;
-		// 		document.getElementById("id_daanbantayanCampus").checked = true;
-		// 		document.getElementById("id_danaoCampus").checked = false;
-		// 		document.getElementById("id_dumanjugExt").checked = false;
-		// 		document.getElementById("id_ginatilanExt").checked = false;
-		// 		document.getElementById("id_mainCampus").checked = false;
-		// 		document.getElementById("id_moalboalCampus").checked = false;
-		// 		document.getElementById("id_nagaExt").checked = false;
-		// 		document.getElementById("id_oslobExt").checked = false;
-		// 		document.getElementById("id_pinamungajanExt").checked = false;
-		// 		document.getElementById("id_sanfernandoExt").checked = false;
-		// 		document.getElementById("id_sanfranciscoCampus").checked = false;
-		// 		document.getElementById("id_tuburanCampus").checked = false;
-		//
-		// 	}else if (school == "Danao Campus"){
-		// 		document.getElementById("id_argaoCampus").checked = false;
-		// 		document.getElementById("id_bariliCampus").checked = false;
-		// 		document.getElementById("id_carmenCampus").checked = false;
-		// 		document.getElementById("id_CCMECampus").checked = false;
-		// 		document.getElementById("id_daanbantayanCampus").checked = false;
-		// 		document.getElementById("id_danaoCampus").checked = true;
-		// 		document.getElementById("id_dumanjugExt").checked = false;
-		// 		document.getElementById("id_ginatilanExt").checked = false;
-		// 		document.getElementById("id_mainCampus").checked = false;
-		// 		document.getElementById("id_moalboalCampus").checked = false;
-		// 		document.getElementById("id_nagaExt").checked = false;
-		// 		document.getElementById("id_oslobExt").checked = false;
-		// 		document.getElementById("id_pinamungajanExt").checked = false;
-		// 		document.getElementById("id_sanfernandoExt").checked = false;
-		// 		document.getElementById("id_sanfranciscoCampus").checked = false;
-		// 		document.getElementById("id_tuburanCampus").checked = false;
-		//
-		// 	}else if (school == "Dumanjug Extension Campus"){
-		// 		document.getElementById("id_argaoCampus").checked = false;
-		// 		document.getElementById("id_bariliCampus").checked = false;
-		// 		document.getElementById("id_carmenCampus").checked = false;
-		// 		document.getElementById("id_CCMECampus").checked = false;
-		// 		document.getElementById("id_daanbantayanCampus").checked = false;
-		// 		document.getElementById("id_danaoCampus").checked = false;
-		// 		document.getElementById("id_dumanjugExt").checked = true;
-		// 		document.getElementById("id_ginatilanExt").checked = false;
-		// 		document.getElementById("id_mainCampus").checked = false;
-		// 		document.getElementById("id_moalboalCampus").checked = false;
-		// 		document.getElementById("id_nagaExt").checked = false;
-		// 		document.getElementById("id_oslobExt").checked = false;
-		// 		document.getElementById("id_pinamungajanExt").checked = false;
-		// 		document.getElementById("id_sanfernandoExt").checked = false;
-		// 		document.getElementById("id_sanfranciscoCampus").checked = false;
-		// 		document.getElementById("id_tuburanCampus").checked = false;
-		//
-		// 	}else if (school == "Ginatilan Extension Campus"){
-		// 		document.getElementById("id_argaoCampus").checked = false;
-		// 		document.getElementById("id_bariliCampus").checked = false;
-		// 		document.getElementById("id_carmenCampus").checked = false;
-		// 		document.getElementById("id_CCMECampus").checked = false;
-		// 		document.getElementById("id_daanbantayanCampus").checked = false;
-		// 		document.getElementById("id_danaoCampus").checked = false;
-		// 		document.getElementById("id_dumanjugExt").checked = false;
-		// 		document.getElementById("id_ginatilanExt").checked = true;
-		// 		document.getElementById("id_mainCampus").checked = false;
-		// 		document.getElementById("id_moalboalCampus").checked = false;
-		// 		document.getElementById("id_nagaExt").checked = false;
-		// 		document.getElementById("id_oslobExt").checked = false;
-		// 		document.getElementById("id_pinamungajanExt").checked = false;
-		// 		document.getElementById("id_sanfernandoExt").checked = false;
-		// 		document.getElementById("id_sanfranciscoCampus").checked = false;
-		// 		document.getElementById("id_tuburanCampus").checked = false;
-		//
-		// 	}else if (school == "Main Campus"){
-		// 		document.getElementById("id_argaoCampus").checked = false;
-		// 		document.getElementById("id_bariliCampus").checked = false;
-		// 		document.getElementById("id_carmenCampus").checked = false;
-		// 		document.getElementById("id_CCMECampus").checked = false;
-		// 		document.getElementById("id_daanbantayanCampus").checked = false;
-		// 		document.getElementById("id_danaoCampus").checked = false;
-		// 		document.getElementById("id_dumanjugExt").checked = false;
-		// 		document.getElementById("id_ginatilanExt").checked = false;
-		// 		document.getElementById("id_mainCampus").checked = true;
-		// 		document.getElementById("id_moalboalCampus").checked = false;
-		// 		document.getElementById("id_nagaExt").checked = false;
-		// 		document.getElementById("id_oslobExt").checked = false;
-		// 		document.getElementById("id_pinamungajanExt").checked = false;
-		// 		document.getElementById("id_sanfernandoExt").checked = false;
-		// 		document.getElementById("id_sanfranciscoCampus").checked = false;
-		// 		document.getElementById("id_tuburanCampus").checked = false;
-		//
-		// 	}else if (school == "Moalboal Campus"){
-		// 		document.getElementById("id_argaoCampus").checked = false;
-		// 		document.getElementById("id_bariliCampus").checked = false;
-		// 		document.getElementById("id_carmenCampus").checked = false;
-		// 		document.getElementById("id_CCMECampus").checked = false;
-		// 		document.getElementById("id_daanbantayanCampus").checked = false;
-		// 		document.getElementById("id_danaoCampus").checked = false;
-		// 		document.getElementById("id_dumanjugExt").checked = false;
-		// 		document.getElementById("id_ginatilanExt").checked = false;
-		// 		document.getElementById("id_mainCampus").checked = false;
-		// 		document.getElementById("id_moalboalCampus").checked = true;
-		// 		document.getElementById("id_nagaExt").checked = false;
-		// 		document.getElementById("id_oslobExt").checked = false;
-		// 		document.getElementById("id_pinamungajanExt").checked = false;
-		// 		document.getElementById("id_sanfernandoExt").checked = false;
-		// 		document.getElementById("id_sanfranciscoCampus").checked = false;
-		// 		document.getElementById("id_tuburanCampus").checked = false;
-		//
-		// 	}else if (school == "Naga Extension Campus"){
-		// 		document.getElementById("id_argaoCampus").checked = false;
-		// 		document.getElementById("id_bariliCampus").checked = false;
-		// 		document.getElementById("id_carmenCampus").checked = false;
-		// 		document.getElementById("id_CCMECampus").checked = false;
-		// 		document.getElementById("id_daanbantayanCampus").checked = false;
-		// 		document.getElementById("id_danaoCampus").checked = false;
-		// 		document.getElementById("id_dumanjugExt").checked = false;
-		// 		document.getElementById("id_ginatilanExt").checked = false;
-		// 		document.getElementById("id_mainCampus").checked = false;
-		// 		document.getElementById("id_moalboalCampus").checked = false;
-		// 		document.getElementById("id_nagaExt").checked = true;
-		// 		document.getElementById("id_oslobExt").checked = false;
-		// 		document.getElementById("id_pinamungajanExt").checked = false;
-		// 		document.getElementById("id_sanfernandoExt").checked = false;
-		// 		document.getElementById("id_sanfranciscoCampus").checked = false;
-		// 		document.getElementById("id_tuburanCampus").checked = false;
-		//
-		// 	}else if (school == "Oslob Extension Campus"){
-		// 		document.getElementById("id_argaoCampus").checked = false;
-		// 		document.getElementById("id_bariliCampus").checked = false;
-		// 		document.getElementById("id_carmenCampus").checked = false;
-		// 		document.getElementById("id_CCMECampus").checked = false;
-		// 		document.getElementById("id_daanbantayanCampus").checked = false;
-		// 		document.getElementById("id_danaoCampus").checked = false;
-		// 		document.getElementById("id_dumanjugExt").checked = false;
-		// 		document.getElementById("id_ginatilanExt").checked = false;
-		// 		document.getElementById("id_mainCampus").checked = false;
-		// 		document.getElementById("id_moalboalCampus").checked = false;
-		// 		document.getElementById("id_nagaExt").checked = false;
-		// 		document.getElementById("id_oslobExt").checked = true;
-		// 		document.getElementById("id_pinamungajanExt").checked = false;
-		// 		document.getElementById("id_sanfernandoExt").checked = false;
-		// 		document.getElementById("id_sanfranciscoCampus").checked = false;
-		// 		document.getElementById("id_tuburanCampus").checked = false;
-		//
-		// 	}else if (school == "Pinamungajan Extension Campus"){
-		// 		document.getElementById("id_argaoCampus").checked = false;
-		// 		document.getElementById("id_bariliCampus").checked = false;
-		// 		document.getElementById("id_carmenCampus").checked = false;
-		// 		document.getElementById("id_CCMECampus").checked = false;
-		// 		document.getElementById("id_daanbantayanCampus").checked = false;
-		// 		document.getElementById("id_danaoCampus").checked = false;
-		// 		document.getElementById("id_dumanjugExt").checked = false;
-		// 		document.getElementById("id_ginatilanExt").checked = false;
-		// 		document.getElementById("id_mainCampus").checked = false;
-		// 		document.getElementById("id_moalboalCampus").checked = false;
-		// 		document.getElementById("id_nagaExt").checked = false;
-		// 		document.getElementById("id_oslobExt").checked = false;
-		// 		document.getElementById("id_pinamungajanExt").checked = true;
-		// 		document.getElementById("id_sanfernandoExt").checked = false;
-		// 		document.getElementById("id_sanfranciscoCampus").checked = false;
-		// 		document.getElementById("id_tuburanCampus").checked = false;
-		//
-		// 	}else if (school == "San Fernando Extension Campus"){
-		// 		document.getElementById("id_argaoCampus").checked = false;
-		// 		document.getElementById("id_bariliCampus").checked = false;
-		// 		document.getElementById("id_carmenCampus").checked = false;
-		// 		document.getElementById("id_CCMECampus").checked = false;
-		// 		document.getElementById("id_daanbantayanCampus").checked = false;
-		// 		document.getElementById("id_danaoCampus").checked = false;
-		// 		document.getElementById("id_dumanjugExt").checked = false;
-		// 		document.getElementById("id_ginatilanExt").checked = false;
-		// 		document.getElementById("id_mainCampus").checked = false;
-		// 		document.getElementById("id_moalboalCampus").checked = false;
-		// 		document.getElementById("id_nagaExt").checked = false;
-		// 		document.getElementById("id_oslobExt").checked = false;
-		// 		document.getElementById("id_pinamungajanExt").checked = false;
-		// 		document.getElementById("id_sanfernandoExt").checked = true;
-		// 		document.getElementById("id_sanfranciscoCampus").checked = false;
-		// 		document.getElementById("id_tuburanCampus").checked = false;
-		//
-		// 	}else if (school == "San Francisco Campus"){
-		// 		document.getElementById("id_argaoCampus").checked = false;
-		// 		document.getElementById("id_bariliCampus").checked = false;
-		// 		document.getElementById("id_carmenCampus").checked = false;
-		// 		document.getElementById("id_CCMECampus").checked = false;
-		// 		document.getElementById("id_daanbantayanCampus").checked = false;
-		// 		document.getElementById("id_danaoCampus").checked = false;
-		// 		document.getElementById("id_dumanjugExt").checked = false;
-		// 		document.getElementById("id_ginatilanExt").checked = false;
-		// 		document.getElementById("id_mainCampus").checked = false;
-		// 		document.getElementById("id_moalboalCampus").checked = false;
-		// 		document.getElementById("id_nagaExt").checked = false;
-		// 		document.getElementById("id_oslobExt").checked = false;
-		// 		document.getElementById("id_pinamungajanExt").checked = false;
-		// 		document.getElementById("id_sanfernandoExt").checked = false;
-		// 		document.getElementById("id_sanfranciscoCampus").checked = true;
-		// 		document.getElementById("id_tuburanCampus").checked = false;
-		//
-		// 	}else if (school == "Tuburan Campus"){
-		// 		document.getElementById("id_argaoCampus").checked = false;
-		// 		document.getElementById("id_bariliCampus").checked = false;
-		// 		document.getElementById("id_carmenCampus").checked = false;
-		// 		document.getElementById("id_CCMECampus").checked = false;
-		// 		document.getElementById("id_daanbantayanCampus").checked = false;
-		// 		document.getElementById("id_danaoCampus").checked = false;
-		// 		document.getElementById("id_dumanjugExt").checked = false;
-		// 		document.getElementById("id_ginatilanExt").checked = false;
-		// 		document.getElementById("id_mainCampus").checked = false;
-		// 		document.getElementById("id_moalboalCampus").checked = false;
-		// 		document.getElementById("id_nagaExt").checked = false;
-		// 		document.getElementById("id_oslobExt").checked = false;
-		// 		document.getElementById("id_pinamungajanExt").checked = false;
-		// 		document.getElementById("id_sanfernandoExt").checked = false;
-		// 		document.getElementById("id_sanfranciscoCampus").checked = false;
-		// 		document.getElementById("id_tuburanCampus").checked = true;
-		//
-		// 	}
-		// }
 
 </script>
+
+<script>
+    let dateDropdown = document.getElementById('date-dropdown');
+
+    let currentYear = new Date().getFullYear();
+    let earliestYear = 1970;
+
+    while (currentYear >= earliestYear) {
+      let dateOption = document.createElement('option');
+      dateOption.text = currentYear;
+      dateOption.value = currentYear;
+      dateDropdown.add(dateOption);
+      currentYear -= 1;
+    }
+  </script>

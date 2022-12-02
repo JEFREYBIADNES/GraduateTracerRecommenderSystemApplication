@@ -155,7 +155,6 @@ class LoginForm(forms.Form):
         self.user = user
         return data
 
-
 class RegisterForm(forms.ModelForm):
     """
     A form for creating new users. Includes all the required
@@ -343,7 +342,7 @@ class GraduateForm(forms.ModelForm):
                   'sanfranciscoCampus',
                   'tuburanCampus',
                   'employment_status',
-                  'job_description',
+                  'job_description', 
                   'skill',)
         widgets = {
          'IDNum': forms.NumberInput(attrs={'class': 'form-control', 'required': 'true'}),
@@ -351,7 +350,7 @@ class GraduateForm(forms.ModelForm):
          'first_name': forms.TextInput(attrs={'class': 'form-control', 'required': 'true'}),
          'middle_name': forms.TextInput(attrs={'class': 'form-control', 'required': 'true'}),
          'last_name': forms.TextInput(attrs={'class': 'form-control', 'required': 'true'}),
-         'birth_date': forms.DateInput(attrs={'class': 'form-control', 'required': 'true'}),
+         'birth_date': forms.DateInput(attrs={'class': 'form-control', 'type': 'date', 'required': 'true'}),
          'age': forms.NumberInput(attrs={'class': 'form-control', 'required': 'true'}),
          'gender': forms.Select(attrs={'class': 'form-control', 'required': 'true'}),
          'address': forms.TextInput(attrs={'class': 'form-control', 'required': 'true'}),
