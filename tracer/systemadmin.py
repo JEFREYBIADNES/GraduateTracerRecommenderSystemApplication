@@ -171,7 +171,7 @@ def school_report(request):
     graduate_counter = []
     employed_counter = []
     unemployed_counter = []
-    school_list = ["Argao Campus", "Barili Campus", "Carmen Campus", "Cebu City Mountain Extension Campus", "Daanbantayan Campus", "Danao Campus", "Dumanjug Extension Campus", "Ginatilan Extension Campus", "Main Campus", "Moalboal Campus", "Naga Extension Campus", "Oslob Extension Campus", "Pinamungajan Extension Campus", "San Fernando Extension Campus", "San Francisco Campus", "Tuburan Campus"]
+    school_list = ["Argao Campus", "Barili Campus", "Carmen Campus", "Cebu City Mountain Extension Campus", "Daanbantayan Campus", "Danao Campus", "Dumanjug Extension Campus", "Ginatilan Extension Campus", "Malabuyoc Extension Campus", "Main Campus", "Moalboal Campus", "Naga Extension Campus", "Oslob Extension Campus", "Pinamungajan Extension Campus", "San Fernando Extension Campus", "San Francisco Campus", "Tuburan Campus"]
 
     i = 0
     j = 0

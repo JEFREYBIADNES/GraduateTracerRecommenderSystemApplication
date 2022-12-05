@@ -73,6 +73,7 @@
 					              {% render_field form.danaoCampus style="display:none;"%}
 					              {% render_field form.dumanjugExt style="display:none;"%}
 					              {% render_field form.ginatilanExt style="display:none;"%}
+								  {% render_field form.malabuyocExt style="display:none;"%}
 					              {% render_field form.mainCampus style="display:none;"%}
 					              {% render_field form.moalboalCampus style="display:none;"%}
 					              {% render_field form.nagaExt style="display:none;"%}
@@ -160,11 +161,11 @@
 			var school_value = document.getElementById("id_school").value ;
 
 			const array_of_school_value = ["Argao Campus","Barili Campus","Carmen Campus","Cebu City Mountain Extension Campus","Daanbantayan Campus","Danao Campus",
-																"Dumanjug Extension Campus", "Ginatilan Extension Campus", "Main Campus","Moalboal Campus","Naga Extension Campus",
+																"Dumanjug Extension Campus", "Ginatilan Extension Campus", "Malabuyoc Extension Campus", "Main Campus","Moalboal Campus","Naga Extension Campus",
 																"Oslob Extension Campus","Pinamungajan Extension Campus","San Fernando Extension Campus","San Francisco Campus","Tuburan Campus",];
 
 			const array_of_school_id = ["id_argaoCampus","id_bariliCampus","id_carmenCampus","id_CCMECampus","id_daanbantayanCampus","id_danaoCampus",
-																"id_dumanjugExt", "id_ginatilanExt","id_mainCampus","id_moalboalCampus","id_nagaExt",
+																"id_dumanjugExt", "id_ginatilanExt", "id_malabuyocExt", "id_mainCampus","id_moalboalCampus","id_nagaExt",
 																"id_oslobExt","id_pinamungajanExt","id_sanfernandoExt","id_sanfranciscoCampus","id_tuburanCampus",];
 			var i = 0;
 			while(i != array_of_school_value.length){

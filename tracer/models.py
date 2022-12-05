@@ -26,6 +26,7 @@ class UserManager(BaseUserManager):
                     is_dumanjugExt=False,
                     is_danaoCampus=False,
                     is_ginatilanExt=False,
+                    is_malabuyocExt=False,
                     is_mainCampus=False,
                     is_moalboalCampus=False,
                     is_nagaExt=False,
@@ -75,6 +76,7 @@ class UserManager(BaseUserManager):
         user_obj.danaoCampus = is_danaoCampus
         user_obj.dumanjugExt = is_dumanjugExt
         user_obj.ginatilanExt = is_ginatilanExt
+        user_obj.malabuyocExt = is_malabuyocExt
         user_obj.mainCampus = is_mainCampus
         user_obj.moalboalCampus = is_moalboalCampus
         user_obj.nagaExt = is_nagaExt
@@ -271,6 +273,7 @@ class User(AbstractBaseUser):
             ('Danao Campus', 'Danao Campus'),
             ('Dumanjug Extension Campus', 'Dumanjug Extension Campus'),
             ('Ginatilan Extension Campus', 'Ginatilan Extension Campus'),
+            ('Malabuyoc Extension Campus', 'Malabuyoc Extension Campus'),
             ('Main Campus', 'Main Campus'),
             ('Moalboal Campus', 'Moalboal Campus'),
             ('Naga Extension Campus', 'Naga Extension Campus'),
@@ -319,6 +322,7 @@ class User(AbstractBaseUser):
     danaoCampus= models.BooleanField(default=False)
     dumanjugExt= models.BooleanField(default=False)
     ginatilanExt= models.BooleanField(default=False)
+    malabuyocExt= models.BooleanField(default=False)
     mainCampus= models.BooleanField(default=False)
     moalboalCampus= models.BooleanField(default=False)
     nagaExt= models.BooleanField(default=False)
@@ -390,6 +394,11 @@ class User(AbstractBaseUser):
     @property
     def is_ginatilanExt(self):
         return self.ginatilanExt
+
+    @property
+    def is_malabuyocExt(self):
+        return self.malabuyocExt
+
     @property
     def is_mainCampus(self):
         return self.mainCampus
@@ -463,6 +472,7 @@ class SystemUser(AbstractUser):
             ('Danao Campus', 'Danao Campus'),
             ('Dumanjug Extension Campus', 'Dumanjug Extension Campus'),
             ('Ginatilan Extension Campus', 'Ginatilan Extension Campus'),
+            ('Malabuyoc Extension Campus', 'Malabuyoc Extension Campus'),
             ('Main Campus', 'Main Campus'),
             ('Moalboal Campus', 'Moalboal Campus'),
             ('Naga Extension Campus', 'Naga Extension Campus'),
@@ -488,6 +498,7 @@ class SystemUser(AbstractUser):
     danaoCampus= models.BooleanField(default=False)
     dumanjugExt= models.BooleanField(default=False)
     ginatilanExt= models.BooleanField(default=False)
+    malabuyocExt= models.BooleanField(default=False)
     mainCampus= models.BooleanField(default=False)
     moalboalCampus= models.BooleanField(default=False)
     nagaExt= models.BooleanField(default=False)
@@ -565,6 +576,11 @@ class SystemUser(AbstractUser):
     @property
     def is_ginatilanExt(self):
         return self.ginatilanExt
+    
+    @property
+    def is_malabuyocExt(self):
+        return self.malabuyocExt
+    
     @property
     def is_mainCampus(self):
         return self.mainCampus
