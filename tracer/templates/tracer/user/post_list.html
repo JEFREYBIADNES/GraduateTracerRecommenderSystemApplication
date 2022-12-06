@@ -184,7 +184,7 @@
   </div>
   <div class="col-lg-3">
       <div class="row justify-content-center  text-content" style="height:100% !important; padding-bottom:none !important;">
-          <ul class="d-none d-lg-inline w-100 sidebar sidebar-dark accordion" id="sidebnav-wrapper" style="height:100% !important; text-color:black;" >
+          <ul class="d-none d-lg-inline w-100" style="height:100% !important; text-color:black;" >
               <div class="body">
                   <div class="sidnav-brand">
                       <strong>YOUR FRIENDS</strong>
@@ -193,7 +193,7 @@
                           {% if grad_info.email != request.user.email %}
                             <div style="white-space: nowrap" class="nav-item active">
                                 <a class="nav-link">
-                                  <img class="img-profile rounded-circle shadow-sm" data-toggle="modal" data-target="#bd-example-modal-lg1{{grad_info.id}}" src="{{grad_info.profile_picture.url}} " width=" 50" height="50" alt="User-Profile-Image">
+                                  <img class="img-profile rounded-circle shadow-sm" data-toggle="modal" data-target="#bd-example-modal-lg1{{grad_info.id}}" src="{{grad_info.profile_picture.url}} " width=" 30" height="30" alt="User-Profile-Image">
                                     <span class="mr-2 d-lg-inline text-gray-700 small" data-toggle="modal" data-target="#bd-example-modal-lg1{{grad_info.id}}"><strong>{{grad_info.email}}</strong></span>
                                 </a>
                             </div>

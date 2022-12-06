@@ -9,7 +9,7 @@
     </div>
     <div class="card-body">
       <form action = "{% url 'AddJobExperience' %}" method = "post">
-        {% include 'tracer/user/JobExperience/_messages.html' %}
+        <!-- {% include 'tracer/user/JobExperience/_messages.html' %} -->
         {% csrf_token %}
 
 
@@ -20,6 +20,7 @@
           class="form-control form-control-sm"
           name="company_name"
           value="{{values.company_name}}"
+          required
         />
       </div>
 
@@ -30,6 +31,7 @@
           class="form-control form-control-sm"
           name="address"
           value="{{values.address}}"
+          required
         />
       </div>
 
@@ -40,6 +42,7 @@
           class="form-control form-control-sm"
           name="position"
           value="{{values.position}}"
+          required
         />
       </div>
 
@@ -50,6 +53,7 @@
           class="form-control form-control-sm"
           name="salary"
           value="{{values.salary}}"
+          required
         />
       </div>
 
@@ -60,6 +64,7 @@
           class="form-control form-control-sm"
           name="experienceStartDate"
           value="{{values.experienceStartDate}}"
+          required
         />
       </div>
 
@@ -70,6 +75,7 @@
           class="form-control form-control-sm"
           name="experienceEndDate"
             value="{{values.experienceEndDate}}"
+            required
         />
       </div>
 
@@ -98,7 +104,7 @@
 <!-- Sweet Alert -->
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script>
+<!-- <script>
   {% for message in messages %}
   Swal.fire({
     position: 'center',
@@ -108,6 +114,6 @@
     timer: 3000
   })
   {% endfor %}
-</script>
+</script> -->
 
 {% endblock %}
